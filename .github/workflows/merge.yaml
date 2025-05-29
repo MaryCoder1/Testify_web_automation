@@ -16,4 +16,4 @@ jobs:
       - name: Print main.py contents
         run: |
           echo "📄 Contents of main.py:"
-          cat Testify_web_automation/main.py
+          cat main.py
