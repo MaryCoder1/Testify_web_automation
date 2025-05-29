@@ -1,0 +1,19 @@
+name: Merge CI
+
+on: [push, pull_request]
+
+jobs:
+  display-file:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Print main.py contents
+        run: |
+          echo "📄 Contents of main.py:"
+          cat main.py
